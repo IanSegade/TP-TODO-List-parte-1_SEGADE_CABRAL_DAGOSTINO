@@ -79,7 +79,7 @@
   
   ul#listaTareas li button {
     padding: 5px 10px;
-    background-color: #f44336;
+    background-color: #aaaaaa;
     color: white;
     border: none;
     border-radius: 4px;
@@ -89,7 +89,7 @@
   }
   
   ul#listaTareas li button:hover {
-    background-color: #e53935;
+    background-color: #aaaaaa;
   }
   
   ul#listaTareas li button:first-child {
@@ -194,7 +194,7 @@ ul#listaTareas li {
 
 ul#listaTareas li button {
   padding: 5px 10px;
-  background-color: #f44336;
+  background-color: #aaaaaa;
   color: white;
   border: none;
   border-radius: 4px;
@@ -204,7 +204,7 @@ ul#listaTareas li button {
 }
 
 ul#listaTareas li button:hover {
-  background-color: #e53935;
+  background-color: #aaaaaa;
 }
 
 ul#listaTareas li button:first-child {
@@ -254,4 +254,5 @@ ul#listaTareas li span[style*="line-through"] {
       margin-top: 5px;
     }
   }
+
 }
