@@ -50,10 +50,25 @@ function mostrarLista() {
     listaCompleta.forEach(tarea => {
         let lista = document.createElement("li");
 
+        let contenedorTarea = document.createElement("div");
+        contenedorTarea.classList.add("tarea-contenedor");
+
         let textoTarea = document.createElement("span");
-        textoTarea.innerHTML = `${tarea.texto} - ${tarea.fecha}`;
+        textoTarea.classList.add("nombre-tarea");
+        textoTarea.innerHTML = tarea.texto;
         
-        textoTarea.style.textDecoration = tarea.completada ? "line-through" : "none";
+        let fechaTarea = document.createElement("span");
+        fechaTarea.classList.add("fecha-tarea");
+        fechaTarea.innerHTML = tarea.fecha;
+
+        contenedorTarea.appendChild(textoTarea);
+        contenedorTarea.appendChild(fechaTarea);
+
+        if (tarea.completada) {
+            textoTarea.style.textDecoration = "line-through";
+        } else {
+            textoTarea.style.textDecoration = "none";
+        }
 
         let botonCompletado = document.createElement("button");
         botonCompletado.innerHTML = "Completado";
@@ -63,7 +78,7 @@ function mostrarLista() {
         botonBorrar.innerHTML = "Borrar tarea";
         botonBorrar.onclick = () => eliminarTarea(tarea.id);
 
-        lista.appendChild(textoTarea);
+        lista.appendChild(contenedorTarea);
         lista.appendChild(botonCompletado);
         lista.appendChild(botonBorrar);
 
@@ -79,4 +94,5 @@ function mostrarLista() {
     } else {
         document.body.classList.remove('todas-completadas');
     }
+
 }
